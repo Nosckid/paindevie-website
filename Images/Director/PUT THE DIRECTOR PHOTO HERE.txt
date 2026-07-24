@@ -1,0 +1,5 @@
+Put the director's photo in this folder and rename it to:  photo.jpg
+(.png, .jpeg and .webp also work)
+
+A portrait-shaped photo (taller than it is wide) looks best.
+You can delete this note afterwards.

@@ -1,0 +1,5 @@
+Put one supplier logo in this folder and rename it to:  photo.jpg
+(.png, .jpeg and .webp also work)
+
+It will join the scrolling supplier strip automatically.
+Leave this folder empty and nothing is shown. You can delete this note.
