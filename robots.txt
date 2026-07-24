@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pain2vie.com/sitemap.xml

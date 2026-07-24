@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you | Pain de Vie</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="Images/Logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--auber:#33183F;--gold:#E39B2E;--gold-soft:#F4C775;--coral:#D8552F;--coral-deep:#B4441F;--cream:#FAF6EF}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;
+     background:var(--auber);color:var(--cream);font-family:'Hanken Grotesk',system-ui,sans-serif;text-align:center}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(120% 90% at 80% 5%,rgba(220,231,233,.18),transparent 46%),radial-gradient(70% 60% at 5% 100%,rgba(227,155,46,.16),transparent 60%);pointer-events:none}
+.box{position:relative;max-width:560px}
+img.logo{height:96px;width:auto;margin:0 auto 30px}
+.tick{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 26px}
+.tick svg{width:30px;height:30px;stroke:var(--gold-soft);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(30px,5vw,44px);letter-spacing:-.8px;margin:0 0 16px;line-height:1.1}
+p{font-size:17.5px;line-height:1.6;color:rgba(250,246,239,.85);margin:0 0 10px}
+p.fr{font-size:15px;color:rgba(250,246,239,.6);font-style:italic;margin-bottom:34px}
+a.btn{display:inline-flex;align-items:center;gap:9px;background:var(--coral);color:#fff;text-decoration:none;
+      font-weight:600;font-size:15.5px;border-radius:999px;padding:14px 28px;transition:background .18s,transform .18s}
+a.btn:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.meta{margin-top:30px;font-size:14px;color:rgba(250,246,239,.6)}
+.meta a{color:var(--gold-soft);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="box">
+    <img class="logo" src="Images/Logo/logo.png" alt="Pain de Vie">
+    <div class="tick"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg></div>
+    <h1>Thank you, your message is on its way</h1>
+    <p>We have received your inquiry and will get back to you shortly.</p>
+    <p class="fr">Merci, nous avons bien reçu votre demande et vous répondrons dans les meilleurs délais.</p>
+    <a class="btn" href="/">Back to the website <span>→</span></a>
+    <p class="meta">Need us sooner? <a href="https://wa.me/2290169296492">WhatsApp</a> · <a href="tel:+2290169296492">+229 01 69 29 64 92</a></p>
+  </div>
+</body>
+</html>

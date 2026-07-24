@@ -1,0 +1,81 @@
+PAIN DE VIE — WEBSITE
+=====================
+
+WHAT IS IN THIS FOLDER
+  index.html   -> the website itself. You never need to open or edit this.
+  Images/      -> every picture the site uses, sorted into folders.
+
+HOW TO CHANGE A PICTURE (no code, no editing)
+  1. Open the Images folder and go to the picture you want to change.
+     Example: Images / Poultry / Whole wing (3-joint)
+  2. Delete the file that is in there.
+  3. Put your own picture in that same folder.
+  4. Rename your picture to:  photo
+     (so it becomes photo.jpg, or photo.png — whatever type it already is)
+  5. Save, then re-upload the whole folder to your website host.
+
+  Accepted picture types: .jpg  .jpeg  .png  .webp
+  The file MUST be named "photo", in small letters, and the extension
+  must be in small letters too (photo.jpg, NOT Photo.JPG).
+  That is how the site finds it.
+
+THE DIRECTOR'S PHOTO
+  Folder:  Images / Director
+  It is empty right now, and the website shows a grey placeholder.
+  Put the director's photo in that folder, name it "photo.jpg",
+  and it appears automatically. The orange "add here" note disappears
+  on its own once the photo is in place.
+  A portrait-shaped photo (taller than wide) looks best.
+
+SUPPLIER LOGOS
+  Folder:  Images / Suppliers
+  Each numbered folder holds one supplier logo.
+    01 = Capago            05 = Tomex
+    02 = Mondial Foods     06 = Polar Fresh Group
+    03 = Saria             07 = Al Khaleej
+    04 = Seafoodia         08 = Brittania
+  Folders 09 to 14 are empty and ready for new suppliers.
+  Drop a logo into any empty one (named "photo.jpg") and it joins the
+  scrolling strip by itself. Remove a logo file and that supplier
+  disappears from the strip. Logos on a white background look best.
+
+THE COMPANY LOGO
+  Folder:  Images / Logo
+  Keep the name exactly "logo.png" if you ever replace it, and keep a
+  see-through (transparent) background.
+
+THE CONTACT FORM  (one setting to switch on, once)
+  When a visitor fills the form and clicks "Send inquiry", the message
+  goes to Netlify, and Netlify emails it to you. You must switch the
+  email on once:
+    1. Deploy the site to Netlify.
+    2. In Netlify open your site -> Forms -> Form notifications.
+    3. Add notification -> Email notification.
+    4. Put paindevie2018@gmail.com as the address, choose the form
+       named "contact", and save.
+  From then on every inquiry arrives in that inbox. The subject line
+  the visitor typed becomes the email subject. You can also read all
+  submissions any time under Forms in Netlify.
+  Free plan allows 100 form submissions per month.
+
+  After sending, the visitor sees the thank-you.html page. Keep that
+  file in the folder.
+
+YOUR WEB ADDRESS
+  The site is set up for:  https://pain2vie.com
+  If that ever changes, tell me and I will update the address inside
+  index.html, sitemap.xml and robots.txt.
+
+PUTTING THE SITE ONLINE
+  Upload the WHOLE folder to your host. On Netlify: drag this entire
+  folder onto the deploy area. Keep every file side by side - do not
+  separate index.html from the Images folder.
+
+  The folder also contains, and these should stay where they are:
+    thank-you.html  - the page shown after the form is sent
+    sitemap.xml     - helps Google list your site
+    robots.txt      - tells search engines they may list your site
+
+TIP
+  After re-uploading, press Ctrl+Shift+R (or Cmd+Shift+R on a Mac)
+  to make your browser show the new pictures instead of the old ones.
