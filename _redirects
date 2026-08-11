@@ -1,0 +1,2 @@
+# Canonicalize the index URL (avoid duplicate /index.html)
+/index.html   /   301!
