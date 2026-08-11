@@ -3,19 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité | Pain de Vie</title>
+<title>Politique de confidentialité et cookies | Pain de Vie</title>
+<meta name="description" content="Politique de confidentialité et de cookies de Pain de Vie Sarl : données collectées, bases légales (RGPD), droits des personnes, Privacy Act australien, conservation et contact.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://pain2vie.com/privacy.html">
 <link rel="icon" type="image/png" href="Images/Logo/favicon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--auber:#33183F;--auber-deep:#24122E;--gold:#E39B2E;--gold-deep:#B4761A;--coral:#D8552F;--cream:#FAF6EF;--cream-2:#F2EADD;--ink:#2A1830;--muted:#8A7A90;--line:rgba(51,24,63,.12);--sans:'Hanken Grotesk','Noto Sans SC',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif}
+:root{--auber:#33183F;--auber-deep:#24122E;--gold:#E39B2E;--gold-deep:#B4761A;--coral:#D8552F;--cream:#FAF6EF;--cream-2:#F2EADD;--ink:#2A1830;--muted:#6B5B71;--line:rgba(51,24,63,.12);--sans:'Hanken Grotesk','Noto Sans SC',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif}
 :lang(zh){--serif:'Noto Sans SC',sans-serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65}
-a{color:var(--coral)}
+a{color:#B4441F}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--auber);color:#fff;padding:10px 16px;z-index:200}
+.skip:focus{left:0}
 .top{background:var(--auber);color:var(--cream);padding:16px 0}
 .wrap{max-width:820px;margin:0 auto;padding:0 24px}
 .top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
@@ -23,92 +29,392 @@ a{color:var(--coral)}
 .top .bt{font-family:var(--serif);font-weight:600;font-size:20px}
 .brand{display:flex;align-items:center;gap:11px;color:inherit;text-decoration:none;margin-right:auto}
 .langsw{display:flex;background:rgba(250,246,239,.12);border:1px solid rgba(250,246,239,.25);border-radius:999px;padding:3px}
-.langsw button{border:none;background:transparent;font-family:var(--sans);font-size:13px;font-weight:600;color:rgba(250,246,239,.7);padding:5px 11px;border-radius:999px;cursor:pointer;transition:all .15s}
+.langsw button{border:none;background:transparent;font-family:var(--sans);font-size:13px;font-weight:600;color:rgba(250,246,239,.75);padding:5px 11px;border-radius:999px;cursor:pointer;transition:all .15s}
 .langsw button[aria-current="true"]{background:var(--cream);color:var(--auber)}
-main{padding:52px 0 72px}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,40px);color:var(--auber);letter-spacing:-.6px;margin:0 0 6px}
-.upd{color:var(--muted);font-size:14px;margin:0 0 34px}
-h2{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--auber);margin:36px 0 10px}
-p{margin:0 0 14px}
-ul{margin:0 0 14px;padding-left:22px}
+main{padding:48px 0 72px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(27px,4vw,38px);color:var(--auber);letter-spacing:-.6px;margin:0 0 6px;line-height:1.15}
+.upd{color:var(--muted);font-size:14px;margin:0 0 10px}
+.intro{background:var(--cream-2);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin:0 0 30px}
+.intro p{margin:0}
+h2{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--auber);margin:34px 0 10px;line-height:1.25}
+h3{font-family:var(--sans);font-weight:700;font-size:16.5px;color:var(--auber);margin:20px 0 6px}
+p{margin:0 0 13px}
+ul{margin:0 0 13px;padding-left:22px}
 li{margin:0 0 7px}
-.back{display:inline-block;margin-top:30px;font-weight:600}
-footer{background:var(--auber-deep);color:rgba(250,246,239,.7);font-size:13.5px;padding:22px 0}
+table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:14.5px}
+caption{text-align:left;font-size:13.5px;color:var(--muted);padding-bottom:8px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--cream-2);font-weight:700;color:var(--auber)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:0 0 34px}
+.toc h2{margin:0 0 10px;font-size:17px}
+.toc ol{margin:0;padding-left:20px}
+.toc li{margin:0 0 5px}
+.back{display:inline-block;margin-top:32px;font-weight:600}
+footer{background:var(--auber-deep);color:rgba(250,246,239,.75);font-size:13.5px;padding:24px 0}
+footer .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+footer button{background:none;border:none;padding:0;font:inherit;color:rgba(250,246,239,.75);cursor:pointer;text-decoration:underline}
+footer a{color:rgba(250,246,239,.75)}
 </style>
 </head>
 <body>
+<a href="#doc" class="skip">Aller au contenu</a>
 <div class="top"><div class="wrap">
   <a class="brand" href="/"><img src="Images/Logo/logo.png" alt="Pain de Vie"><span class="bt">Pain de Vie</span></a>
-  <div class="langsw" role="group" aria-label="Language">
-    <button data-lang="en" aria-current="false">EN</button>
-    <button data-lang="fr" aria-current="true">FR</button>
-    <button data-lang="es" aria-current="false">ES</button>
-    <button data-lang="zh" lang="zh" aria-current="false">中文</button>
+  <div class="langsw" role="group" aria-label="Language / Langue">
+    <button data-lang="en" lang="en" aria-current="false"><span aria-hidden="true">EN</span><span class="sr-only">English</span></button>
+    <button data-lang="fr" lang="fr" aria-current="true"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></button>
+    <button data-lang="es" lang="es" aria-current="false"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></button>
+    <button data-lang="zh" lang="zh" aria-current="false"><span aria-hidden="true">中文</span><span class="sr-only">中文</span></button>
   </div>
 </div></div>
-<main>
+<main id="doc" tabindex="-1">
   <div class="wrap">
-    <h1 data-i18n="h1">Politique de confidentialité</h1>
-    <p class="upd" data-i18n="upd">Dernière mise à jour : août 2026</p>
-
-    <p data-i18n="intro">Pain de Vie Sarl (« nous ») respecte votre vie privée. Cette page explique quelles données nous recueillons via ce site, pourquoi, et vos droits.</p>
-
-    <h2 data-i18n="h_collect">Données que nous collectons</h2>
-    <p data-i18n="collect_intro">Nous ne collectons de données personnelles que lorsque vous remplissez volontairement notre formulaire de contact. Il s'agit de :</p>
-    <ul>
-      <li data-i18n="c_name">votre nom ;</li>
-      <li data-i18n="c_email">votre adresse e-mail ;</li>
-      <li data-i18n="c_msg">l'objet et le contenu de votre message.</li>
-    </ul>
-    <p data-i18n="collect_note">Nous n'utilisons pas de cookies publicitaires ni de traceurs. Votre choix de langue est conservé localement dans votre navigateur (localStorage) et n'est jamais transmis.</p>
-
-    <h2 data-i18n="h_use">Utilisation des données</h2>
-    <p data-i18n="use_p">Ces informations servent uniquement à répondre à votre demande et à assurer le suivi commercial. Nous ne vendons ni ne louons vos données à des tiers.</p>
-
-    <h2 data-i18n="h_proc">Sous-traitants</h2>
-    <ul>
-      <li><strong>FormSubmit</strong> <span data-i18n="proc_form">traite l'envoi du formulaire et nous transmet votre message par e-mail.</span> (<a href="https://formsubmit.co/privacy" target="_blank" rel="noopener" data-i18n="proc_form_link">politique de FormSubmit</a>)</li>
-      <li><strong>Google Fonts</strong> <span data-i18n="proc_fonts">fournit les polices d'affichage ; à ce titre, votre adresse IP est visible par Google lors du chargement des polices.</span></li>
-      <li><strong>Cloudflare</strong> <span data-i18n="proc_cf">héberge et distribue le site.</span></li>
-    </ul>
-
-    <h2 data-i18n="h_ret">Conservation</h2>
-    <p data-i18n="ret_p">Les messages reçus sont conservés dans notre boîte e-mail le temps nécessaire au traitement de votre demande, puis supprimés sur simple demande.</p>
-
-    <h2 data-i18n="h_rights">Vos droits</h2>
-    <p><span data-i18n="rights_p">Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant à</span> <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a>.</p>
-
-    <h2 data-i18n="h_contact">Contact</h2>
-    <p><span data-i18n="contact_p">Pain de Vie Sarl — Irédé, Cotonou, Bénin —</span> <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a></p>
-
-    <a class="back" href="/" data-i18n="back">← Retour au site</a>
+    <h1 id="p-title">Politique de confidentialité et cookies</h1>
+    <p class="upd" id="p-upd"></p>
+    <div class="intro"><p id="p-intro"></p></div>
+    <nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">Sommaire</h2><ol id="p-toc"></ol></nav>
+    <div id="p-body"></div>
+    <noscript>
+      <p><strong>Résumé :</strong> nous ne collectons que le nom, l'e-mail et le message que vous envoyez via notre formulaire de contact, afin de répondre à votre demande. Nous n'utilisons aucun cookie publicitaire et ne vendons aucune donnée. Pour exercer vos droits, écrivez à <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a>.</p>
+    </noscript>
+    <a class="back" href="/" id="p-back">← Retour au site</a>
   </div>
 </main>
-<footer><div class="wrap">© <span id="yr"></span> Pain de Vie Sarl. <span data-i18n="foot">Irédé, Cotonou, Bénin.</span></div></footer>
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> Pain de Vie Sarl — Irédé, Cotonou, Bénin</span>
+  <button type="button" data-cookie-settings>Cookie settings</button>
+</div></footer>
+
 <script>
-const PRIV={
-en:{__title:"Privacy Policy | Pain de Vie",h1:"Privacy Policy",upd:"Last updated: August 2026",intro:"Pain de Vie Sarl (“we”) respects your privacy. This page explains what data we collect through this site, why, and your rights.",h_collect:"What we collect",collect_intro:"We only collect personal data when you voluntarily fill in our contact form. This includes:",c_name:"your name;",c_email:"your email address;",c_msg:"the subject and content of your message.",collect_note:"We do not use advertising cookies or trackers. Your language choice is stored locally in your browser (localStorage) and is never transmitted.",h_use:"How we use your data",use_p:"This information is used solely to respond to your inquiry and manage the commercial relationship. We do not sell or rent your data to third parties.",h_proc:"Processors",proc_form:"handles the form submission and delivers your message to us by email.",proc_form_link:"FormSubmit's policy",proc_fonts:"provides the display fonts; as such, your IP address is visible to Google when fonts load.",proc_cf:"hosts and delivers the site.",h_ret:"Retention",ret_p:"Messages received are kept in our mailbox for as long as needed to handle your request, then deleted on request.",h_rights:"Your rights",rights_p:"You can request access to, correction of, or deletion of your data by writing to us at",h_contact:"Contact",contact_p:"Pain de Vie Sarl — Irédé, Cotonou, Benin —",back:"← Back to site",foot:"Irédé, Cotonou, Benin."},
-fr:{__title:"Politique de confidentialité | Pain de Vie",h1:"Politique de confidentialité",upd:"Dernière mise à jour : août 2026",intro:"Pain de Vie Sarl (« nous ») respecte votre vie privée. Cette page explique quelles données nous recueillons via ce site, pourquoi, et vos droits.",h_collect:"Données que nous collectons",collect_intro:"Nous ne collectons de données personnelles que lorsque vous remplissez volontairement notre formulaire de contact. Il s'agit de :",c_name:"votre nom ;",c_email:"votre adresse e-mail ;",c_msg:"l'objet et le contenu de votre message.",collect_note:"Nous n'utilisons pas de cookies publicitaires ni de traceurs. Votre choix de langue est conservé localement dans votre navigateur (localStorage) et n'est jamais transmis.",h_use:"Utilisation des données",use_p:"Ces informations servent uniquement à répondre à votre demande et à assurer le suivi commercial. Nous ne vendons ni ne louons vos données à des tiers.",h_proc:"Sous-traitants",proc_form:"traite l'envoi du formulaire et nous transmet votre message par e-mail.",proc_form_link:"politique de FormSubmit",proc_fonts:"fournit les polices d'affichage ; à ce titre, votre adresse IP est visible par Google lors du chargement des polices.",proc_cf:"héberge et distribue le site.",h_ret:"Conservation",ret_p:"Les messages reçus sont conservés dans notre boîte e-mail le temps nécessaire au traitement de votre demande, puis supprimés sur simple demande.",h_rights:"Vos droits",rights_p:"Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant à",h_contact:"Contact",contact_p:"Pain de Vie Sarl — Irédé, Cotonou, Bénin —",back:"← Retour au site",foot:"Irédé, Cotonou, Bénin."},
-es:{__title:"Política de privacidad | Pain de Vie",h1:"Política de privacidad",upd:"Última actualización: agosto de 2026",intro:"Pain de Vie Sarl («nosotros») respeta su privacidad. Esta página explica qué datos recopilamos a través de este sitio, por qué y cuáles son sus derechos.",h_collect:"Qué datos recopilamos",collect_intro:"Solo recopilamos datos personales cuando usted completa voluntariamente nuestro formulario de contacto. Estos son:",c_name:"su nombre;",c_email:"su dirección de correo electrónico;",c_msg:"el asunto y el contenido de su mensaje.",collect_note:"No utilizamos cookies publicitarias ni rastreadores. Su elección de idioma se guarda localmente en su navegador (localStorage) y nunca se transmite.",h_use:"Uso de los datos",use_p:"Esta información se utiliza únicamente para responder a su solicitud y gestionar la relación comercial. No vendemos ni alquilamos sus datos a terceros.",h_proc:"Encargados del tratamiento",proc_form:"gestiona el envío del formulario y nos entrega su mensaje por correo electrónico.",proc_form_link:"política de FormSubmit",proc_fonts:"proporciona las tipografías; por ello, su dirección IP es visible para Google al cargar las fuentes.",proc_cf:"aloja y distribuye el sitio.",h_ret:"Conservación",ret_p:"Los mensajes recibidos se conservan en nuestro buzón durante el tiempo necesario para gestionar su solicitud y se eliminan cuando lo solicite.",h_rights:"Sus derechos",rights_p:"Puede solicitar el acceso, la rectificación o la eliminación de sus datos escribiéndonos a",h_contact:"Contacto",contact_p:"Pain de Vie Sarl — Irédé, Cotonú, Benín —",back:"← Volver al sitio",foot:"Irédé, Cotonú, Benín."},
-zh:{__title:"隐私政策 | Pain de Vie",h1:"隐私政策",upd:"最后更新：2026年8月",intro:"Pain de Vie Sarl（“我们”）尊重您的隐私。本页说明我们通过本网站收集哪些数据、原因以及您的权利。",h_collect:"我们收集的数据",collect_intro:"只有当您主动填写我们的联系表单时，我们才会收集个人数据，包括：",c_name:"您的姓名；",c_email:"您的电子邮箱；",c_msg:"您的留言主题和内容。",collect_note:"我们不使用广告 Cookie 或跟踪器。您的语言选择仅保存在您的浏览器本地（localStorage），绝不会被传输。",h_use:"数据的使用",use_p:"这些信息仅用于回复您的咨询并进行业务跟进。我们不会向第三方出售或出租您的数据。",h_proc:"第三方服务",proc_form:"负责处理表单提交，并通过电子邮件将您的留言转发给我们。",proc_form_link:"FormSubmit 隐私政策",proc_fonts:"提供网页字体；因此在加载字体时，Google 可见您的 IP 地址。",proc_cf:"负责托管和分发本网站。",h_ret:"数据保留",ret_p:"收到的留言会在处理您请求所需的期间内保存在我们的邮箱中，之后可应要求删除。",h_rights:"您的权利",rights_p:"您可以通过以下邮箱联系我们，要求访问、更正或删除您的数据：",h_contact:"联系",contact_p:"Pain de Vie Sarl — 科托努 Irédé，贝宁 —",back:"← 返回网站",foot:"科托努 Irédé，贝宁。"}
-};
-const SUPPORTED=["en","fr","es","zh"];
-function setLang(lang){
-  if(!SUPPORTED.includes(lang))lang="en";
-  const d=PRIV[lang];
-  document.documentElement.lang=lang;
-  document.title=d.__title;
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var k=el.getAttribute("data-i18n"); if(k in d)el.textContent=d[k];
-  });
-  document.querySelectorAll(".langsw button").forEach(function(b){b.setAttribute("aria-current",b.dataset.lang===lang?"true":"false");});
-  try{localStorage.setItem("pdv_lang",lang);}catch(e){}
+/* Content for all four languages. Each section: h = heading, and blocks of
+   p (paragraph), ul (bullet list), h3 (sub-heading) or table. */
+var DOC={};
+
+DOC.fr={
+ title:"Politique de confidentialité et cookies",
+ updated:"Dernière mise à jour : 11 août 2026",
+ intro:"Pain de Vie Sarl respecte votre vie privée. Cette politique explique quelles données personnelles nous traitons, pourquoi, sur quelle base légale, avec qui nous les partageons et comment exercer vos droits. Elle est rédigée pour respecter le Règlement général sur la protection des données (RGPD, UE 2016/679) et le Privacy Act 1988 australien (Australian Privacy Principles).",
+ back:"← Retour au site",
+ toc_h:"Sommaire",
+ sections:[
+  {h:"1. Qui est responsable de vos données",
+   p:["Le responsable du traitement est <strong>Pain de Vie Sarl</strong>, importateur et distributeur de produits congelés, Irédé, Cotonou, Bénin.",
+      "Pour toute question relative à cette politique ou pour exercer vos droits : <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>."]},
+  {h:"2. Champ d'application",
+   p:["Cette politique couvre le site pain2vie.com. Nous appliquons le RGPD aux visiteurs situés dans l'Espace économique européen et au Royaume-Uni, et les Australian Privacy Principles aux visiteurs situés en Australie. Lorsque les deux régimes s'appliquent, nous retenons la protection la plus élevée."]},
+  {h:"3. Données que nous traitons",
+   h3a:"a) Données que vous nous fournissez",
+   ula:["votre nom ;","votre adresse e-mail ;","l'objet et le contenu de votre message ;","toute information que vous choisissez d'ajouter (volumes, société, besoins)."],
+   h3b:"b) Données collectées automatiquement",
+   pb:["Notre hébergeur Cloudflare enregistre des journaux techniques nécessaires à la sécurité et au bon fonctionnement du site : adresse IP, type de navigateur, page consultée, date et heure. Ces journaux servent uniquement à prévenir les abus et les pannes."],
+   h3c:"c) Données stockées sur votre appareil",
+   pc:["Nous n'utilisons aucun cookie publicitaire ni traceur tiers. Voir la section 5."],
+   h3d:"d) Données sensibles",
+   pd:["Nous ne collectons jamais de données sensibles (santé, opinions politiques ou religieuses, données biométriques). Merci de ne pas en inclure dans vos messages."]},
+  {h:"4. Finalités et bases légales",
+   p:["Nous ne traitons vos données que pour les finalités suivantes :"],
+   table:{head:["Finalité","Données","Base légale (RGPD)"],
+    rows:[["Répondre à votre demande commerciale","Nom, e-mail, message","Mesures précontractuelles (art. 6.1.b) et intérêt légitime (art. 6.1.f)"],
+          ["Sécurité du site et prévention des abus","Journaux techniques, adresse IP","Intérêt légitime (art. 6.1.f)"],
+          ["Mémoriser la langue choisie et votre choix de consentement","Stockage local","Intérêt légitime / fonctionnement demandé par vous"],
+          ["Mesure d'audience anonyme (si activée)","Statistiques agrégées","Consentement (art. 6.1.a) — désactivé par défaut"]]},
+   p2:["Nous n'utilisons jamais vos données pour de la prospection automatisée, du profilage ou de la publicité ciblée."]},
+  {h:"5. Cookies et stockage local (politique de cookies)",
+   p:["Ce site n'installe <strong>aucun cookie publicitaire</strong> et n'utilise aucun traceur tiers. Nous utilisons uniquement le stockage local de votre navigateur (localStorage), qui reste sur votre appareil et n'est jamais transmis à nos serveurs."],
+   table:{head:["Nom","Type","Finalité","Durée"],
+    rows:[["pdv_lang","Stockage local — nécessaire","Mémoriser la langue que vous avez choisie","Jusqu'à effacement par vous"],
+          ["pdv_consent","Stockage local — nécessaire","Mémoriser votre choix de consentement","12 mois"],
+          ["Mesure d'audience","Optionnel — consentement","Comptage anonyme des visites. Chargé uniquement si vous acceptez.","Désactivé par défaut"]]},
+   p2:["Vous pouvez accepter ou refuser la mesure d'audience à tout moment : refuser est aussi simple qu'accepter et ne retire aucune fonctionnalité. Pour revenir sur votre choix, utilisez le lien « Paramètres des cookies » en bas de chaque page. Vous pouvez aussi effacer le stockage local dans les réglages de votre navigateur."]},
+  {h:"6. Destinataires et sous-traitants",
+   p:["Nous ne vendons ni ne louons jamais vos données. Elles sont accessibles uniquement à notre personnel autorisé et aux prestataires suivants, qui agissent sur nos instructions :"],
+   ul:["<strong>FormSubmit</strong> — traite l'envoi du formulaire et nous transmet votre message par e-mail (<a href=\"https://formsubmit.co/privacy\" target=\"_blank\" rel=\"noopener\">politique</a>) ;",
+       "<strong>Cloudflare</strong> — hébergement, diffusion et sécurité du site (<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener\">politique</a>) ;",
+       "<strong>Google Fonts</strong> — fourniture des polices d'affichage ; votre adresse IP est visible par Google lors du chargement des polices (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">politique</a>) ;",
+       "<strong>Google Workspace / Gmail</strong> — réception et conservation des messages qui nous sont adressés."],
+   p2:["Nous pouvons également divulguer des données si la loi l'exige ou pour faire valoir nos droits."]},
+  {h:"7. Transferts internationaux",
+   p:["Nos prestataires peuvent traiter vos données en dehors du Bénin, de l'Espace économique européen ou de l'Australie, notamment aux États-Unis. Ces transferts s'appuient sur des garanties appropriées, telles que les clauses contractuelles types de la Commission européenne. Vous pouvez nous écrire pour obtenir des précisions."]},
+  {h:"8. Durée de conservation",
+   ul:["Messages reçus via le formulaire : conservés le temps nécessaire au traitement de votre demande, puis jusqu'à 3 ans après le dernier contact à des fins commerciales, sauf demande de suppression ;",
+       "Journaux techniques de sécurité : durée courte définie par notre hébergeur ;",
+       "Stockage local : voir les durées indiquées à la section 5."]},
+  {h:"9. Sécurité",
+   p:["Le site est servi exclusivement en HTTPS et protégé par des en-têtes de sécurité (CSP, HSTS). L'accès aux messages reçus est limité aux personnes qui en ont besoin. Aucun système n'étant infaillible, nous vous invitons à ne pas transmettre d'informations confidentielles sensibles par formulaire."]},
+  {h:"10. Vos droits (RGPD)",
+   p:["Si vous vous trouvez dans l'EEE ou au Royaume-Uni, vous disposez des droits suivants :"],
+   ul:["droit d'accès à vos données ;","droit de rectification ;","droit à l'effacement (« droit à l'oubli ») ;","droit à la limitation du traitement ;","droit à la portabilité ;","droit d'opposition, notamment au traitement fondé sur l'intérêt légitime ;","droit de retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur."],
+   p2:["Pour exercer ces droits, écrivez à <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. Nous répondons dans un délai d'un mois. Vous avez également le droit d'introduire une réclamation auprès de l'autorité de contrôle de votre pays."]},
+  {h:"11. Vos droits (Privacy Act 1988 — Australie)",
+   p:["Si vous vous trouvez en Australie, les Australian Privacy Principles vous donnent le droit de demander l'accès à vos renseignements personnels et leur correction. Nous traitons ces demandes dans un délai raisonnable et gratuitement lorsque cela est possible.",
+      "Si vous estimez que nous avons enfreint les APP, vous pouvez nous adresser une plainte à <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. Nous accusons réception sous 30 jours. Si la réponse ne vous satisfait pas, vous pouvez saisir l'Office of the Australian Information Commissioner (OAIC) : <a href=\"https://www.oaic.gov.au\" target=\"_blank\" rel=\"noopener\">oaic.gov.au</a>.",
+      "En cas de violation de données susceptible de causer un préjudice grave, nous vous informerons ainsi que l'autorité compétente, conformément au régime Notifiable Data Breaches."]},
+  {h:"12. Mineurs",
+   p:["Ce site s'adresse à des professionnels. Nous ne collectons pas sciemment de données concernant des personnes de moins de 16 ans. Si vous pensez qu'un mineur nous a transmis des données, écrivez-nous et nous les supprimerons."]},
+  {h:"13. Modifications",
+   p:["Nous pouvons mettre à jour cette politique. Toute modification importante sera signalée sur cette page avec une nouvelle date de mise à jour. La date en haut de page fait foi."]},
+  {h:"14. Nous contacter",
+   p:["Pain de Vie Sarl — Irédé, Cotonou, Bénin<br>E-mail : <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a><br>Téléphone : <a href=\"tel:+2290169296492\">+229 01 69 29 64 92</a>"]}
+ ]};
+
+DOC.en={
+ title:"Privacy & Cookie Policy",
+ updated:"Last updated: 11 August 2026",
+ intro:"Pain de Vie Sarl respects your privacy. This policy explains what personal data we process, why, on what legal basis, who we share it with, and how to exercise your rights. It is written to meet the EU General Data Protection Regulation (GDPR 2016/679) and the Australian Privacy Act 1988 (Australian Privacy Principles).",
+ back:"← Back to site",
+ toc_h:"Contents",
+ sections:[
+  {h:"1. Who is responsible for your data",
+   p:["The data controller is <strong>Pain de Vie Sarl</strong>, importer and distributor of frozen foods, Irédé, Cotonou, Benin.",
+      "For any question about this policy, or to exercise your rights: <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>."]},
+  {h:"2. Scope",
+   p:["This policy covers the pain2vie.com website. We apply the GDPR to visitors in the European Economic Area and the United Kingdom, and the Australian Privacy Principles to visitors in Australia. Where both apply, we follow the higher standard."]},
+  {h:"3. Data we process",
+   h3a:"a) Information you give us",
+   ula:["your name;","your email address;","the subject and content of your message;","anything else you choose to add (volumes, company, requirements)."],
+   h3b:"b) Information collected automatically",
+   pb:["Our host, Cloudflare, records technical logs needed for security and reliability: IP address, browser type, page requested, date and time. These logs are used only to prevent abuse and diagnose faults."],
+   h3c:"c) Data stored on your device",
+   pc:["We use no advertising cookies and no third-party trackers. See section 5."],
+   h3d:"d) Sensitive data",
+   pd:["We never collect sensitive data (health, political or religious views, biometric data). Please do not include such information in your messages."]},
+  {h:"4. Purposes and legal bases",
+   p:["We process your data only for the following purposes:"],
+   table:{head:["Purpose","Data","Legal basis (GDPR)"],
+    rows:[["Responding to your business enquiry","Name, email, message","Pre-contractual steps (Art. 6(1)(b)) and legitimate interests (Art. 6(1)(f))"],
+          ["Site security and abuse prevention","Technical logs, IP address","Legitimate interests (Art. 6(1)(f))"],
+          ["Remembering your language and consent choice","Local storage","Legitimate interests / functionality you requested"],
+          ["Anonymous audience measurement (if enabled)","Aggregated statistics","Consent (Art. 6(1)(a)) — off by default"]]},
+   p2:["We never use your data for automated prospecting, profiling or targeted advertising."]},
+  {h:"5. Cookies and local storage (cookie policy)",
+   p:["This site sets <strong>no advertising cookies</strong> and uses no third-party trackers. We use only your browser's local storage, which stays on your device and is never sent to our servers."],
+   table:{head:["Name","Type","Purpose","Duration"],
+    rows:[["pdv_lang","Local storage — necessary","Remember the language you chose","Until you clear it"],
+          ["pdv_consent","Local storage — necessary","Remember your consent choice","12 months"],
+          ["Audience measurement","Optional — consent","Anonymous visit counts. Loaded only if you accept.","Off by default"]]},
+   p2:["You can accept or refuse audience measurement at any time: refusing is exactly as easy as accepting and removes no functionality. To change your choice, use the “Cookie settings” link at the bottom of any page. You can also clear local storage in your browser settings."]},
+  {h:"6. Recipients and processors",
+   p:["We never sell or rent your data. It is accessible only to our authorised staff and to the following providers, acting on our instructions:"],
+   ul:["<strong>FormSubmit</strong> — handles form submission and delivers your message to us by email (<a href=\"https://formsubmit.co/privacy\" target=\"_blank\" rel=\"noopener\">policy</a>);",
+       "<strong>Cloudflare</strong> — hosting, delivery and site security (<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener\">policy</a>);",
+       "<strong>Google Fonts</strong> — supplies display fonts; your IP address is visible to Google when fonts load (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policy</a>);",
+       "<strong>Google Workspace / Gmail</strong> — receives and stores the messages sent to us."],
+   p2:["We may also disclose data where required by law or to establish or defend legal claims."]},
+  {h:"7. International transfers",
+   p:["Our providers may process your data outside Benin, the European Economic Area or Australia, including in the United States. Such transfers rely on appropriate safeguards, such as the European Commission's Standard Contractual Clauses. Contact us for details."]},
+  {h:"8. Retention",
+   ul:["Messages received through the form: kept for as long as needed to handle your request, then up to 3 years after last contact for business purposes, unless you ask for deletion;",
+       "Technical security logs: short retention set by our host;",
+       "Local storage: see the durations in section 5."]},
+  {h:"9. Security",
+   p:["The site is served exclusively over HTTPS and protected by security headers (CSP, HSTS). Access to received messages is limited to those who need it. No system is perfect, so please do not send highly confidential information through the form."]},
+  {h:"10. Your rights (GDPR)",
+   p:["If you are in the EEA or the UK, you have the right to:"],
+   ul:["access your data;","have it corrected;","have it erased (“right to be forgotten”);","restrict processing;","data portability;","object to processing, in particular processing based on legitimate interests;","withdraw consent at any time, without affecting the lawfulness of earlier processing."],
+   p2:["To exercise these rights, email <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. We respond within one month. You also have the right to lodge a complaint with your national supervisory authority."]},
+  {h:"11. Your rights (Privacy Act 1988 — Australia)",
+   p:["If you are in Australia, the Australian Privacy Principles give you the right to request access to your personal information and to have it corrected. We handle such requests within a reasonable period and free of charge where practicable.",
+      "If you believe we have breached the APPs, you may complain to us at <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. We acknowledge complaints within 30 days. If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner (OAIC): <a href=\"https://www.oaic.gov.au\" target=\"_blank\" rel=\"noopener\">oaic.gov.au</a>.",
+      "In the event of a data breach likely to cause serious harm, we will notify you and the relevant authority under the Notifiable Data Breaches scheme."]},
+  {h:"12. Children",
+   p:["This site is aimed at business customers. We do not knowingly collect data from anyone under 16. If you believe a minor has given us data, contact us and we will delete it."]},
+  {h:"13. Changes",
+   p:["We may update this policy. Any significant change will be shown on this page with a new update date. The date at the top of the page governs."]},
+  {h:"14. Contact us",
+   p:["Pain de Vie Sarl — Irédé, Cotonou, Benin<br>Email: <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a><br>Phone: <a href=\"tel:+2290169296492\">+229 01 69 29 64 92</a>"]}
+ ]};
+
+DOC.es={
+ title:"Política de privacidad y cookies",
+ updated:"Última actualización: 11 de agosto de 2026",
+ intro:"Pain de Vie Sarl respeta su privacidad. Esta política explica qué datos personales tratamos, con qué finalidad, sobre qué base jurídica, con quién los compartimos y cómo ejercer sus derechos. Está redactada conforme al Reglamento General de Protección de Datos (RGPD, UE 2016/679) y a la Privacy Act 1988 australiana (Australian Privacy Principles).",
+ back:"← Volver al sitio",
+ toc_h:"Índice",
+ sections:[
+  {h:"1. Quién es responsable de sus datos",
+   p:["El responsable del tratamiento es <strong>Pain de Vie Sarl</strong>, importador y distribuidor de productos congelados, Irédé, Cotonú, Benín.",
+      "Para cualquier consulta sobre esta política o para ejercer sus derechos: <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>."]},
+  {h:"2. Ámbito de aplicación",
+   p:["Esta política cubre el sitio pain2vie.com. Aplicamos el RGPD a los visitantes del Espacio Económico Europeo y del Reino Unido, y los Australian Privacy Principles a los visitantes de Australia. Cuando ambos regímenes coinciden, aplicamos el nivel de protección más alto."]},
+  {h:"3. Datos que tratamos",
+   h3a:"a) Datos que usted nos facilita",
+   ula:["su nombre;","su dirección de correo electrónico;","el asunto y el contenido de su mensaje;","cualquier información que decida añadir (volúmenes, empresa, necesidades)."],
+   h3b:"b) Datos recogidos automáticamente",
+   pb:["Nuestro proveedor Cloudflare registra datos técnicos necesarios para la seguridad y el funcionamiento del sitio: dirección IP, tipo de navegador, página solicitada, fecha y hora. Estos registros solo se utilizan para prevenir abusos y diagnosticar fallos."],
+   h3c:"c) Datos almacenados en su dispositivo",
+   pc:["No utilizamos cookies publicitarias ni rastreadores de terceros. Véase la sección 5."],
+   h3d:"d) Datos sensibles",
+   pd:["Nunca recopilamos datos sensibles (salud, opiniones políticas o religiosas, datos biométricos). Le rogamos que no los incluya en sus mensajes."]},
+  {h:"4. Finalidades y bases jurídicas",
+   p:["Solo tratamos sus datos para las siguientes finalidades:"],
+   table:{head:["Finalidad","Datos","Base jurídica (RGPD)"],
+    rows:[["Responder a su consulta comercial","Nombre, correo, mensaje","Medidas precontractuales (art. 6.1.b) e interés legítimo (art. 6.1.f)"],
+          ["Seguridad del sitio y prevención de abusos","Registros técnicos, dirección IP","Interés legítimo (art. 6.1.f)"],
+          ["Recordar su idioma y su decisión de consentimiento","Almacenamiento local","Interés legítimo / funcionalidad solicitada por usted"],
+          ["Medición de audiencia anónima (si se activa)","Estadísticas agregadas","Consentimiento (art. 6.1.a) — desactivado por defecto"]]},
+   p2:["Nunca utilizamos sus datos para prospección automatizada, elaboración de perfiles ni publicidad dirigida."]},
+  {h:"5. Cookies y almacenamiento local (política de cookies)",
+   p:["Este sitio no instala <strong>ninguna cookie publicitaria</strong> ni utiliza rastreadores de terceros. Solo empleamos el almacenamiento local de su navegador, que permanece en su dispositivo y nunca se envía a nuestros servidores."],
+   table:{head:["Nombre","Tipo","Finalidad","Duración"],
+    rows:[["pdv_lang","Almacenamiento local — necesario","Recordar el idioma que eligió","Hasta que usted lo borre"],
+          ["pdv_consent","Almacenamiento local — necesario","Recordar su decisión de consentimiento","12 meses"],
+          ["Medición de audiencia","Opcional — consentimiento","Recuento anónimo de visitas. Solo se carga si acepta.","Desactivado por defecto"]]},
+   p2:["Puede aceptar o rechazar la medición de audiencia en cualquier momento: rechazar es tan sencillo como aceptar y no elimina ninguna funcionalidad. Para cambiar su decisión, use el enlace «Configuración de cookies» al final de cualquier página. También puede borrar el almacenamiento local desde los ajustes de su navegador."]},
+  {h:"6. Destinatarios y encargados del tratamiento",
+   p:["Nunca vendemos ni alquilamos sus datos. Solo tienen acceso nuestro personal autorizado y los siguientes proveedores, que actúan siguiendo nuestras instrucciones:"],
+   ul:["<strong>FormSubmit</strong> — gestiona el envío del formulario y nos entrega su mensaje por correo (<a href=\"https://formsubmit.co/privacy\" target=\"_blank\" rel=\"noopener\">política</a>);",
+       "<strong>Cloudflare</strong> — alojamiento, distribución y seguridad del sitio (<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener\">política</a>);",
+       "<strong>Google Fonts</strong> — proporciona las tipografías; su dirección IP es visible para Google al cargar las fuentes (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">política</a>);",
+       "<strong>Google Workspace / Gmail</strong> — recibe y conserva los mensajes que nos envía."],
+   p2:["También podemos comunicar datos cuando lo exija la ley o para ejercer o defender reclamaciones legales."]},
+  {h:"7. Transferencias internacionales",
+   p:["Nuestros proveedores pueden tratar sus datos fuera de Benín, del Espacio Económico Europeo o de Australia, incluidos los Estados Unidos. Dichas transferencias se amparan en garantías adecuadas, como las Cláusulas Contractuales Tipo de la Comisión Europea. Escríbanos si desea más detalles."]},
+  {h:"8. Conservación",
+   ul:["Mensajes recibidos por el formulario: se conservan el tiempo necesario para atender su solicitud y hasta 3 años tras el último contacto con fines comerciales, salvo que solicite su supresión;",
+       "Registros técnicos de seguridad: periodo breve fijado por nuestro proveedor;",
+       "Almacenamiento local: véanse las duraciones de la sección 5."]},
+  {h:"9. Seguridad",
+   p:["El sitio se sirve exclusivamente por HTTPS y está protegido con cabeceras de seguridad (CSP, HSTS). El acceso a los mensajes recibidos se limita a quienes lo necesitan. Ningún sistema es infalible, por lo que le rogamos que no envíe información altamente confidencial a través del formulario."]},
+  {h:"10. Sus derechos (RGPD)",
+   p:["Si se encuentra en el EEE o el Reino Unido, tiene derecho a:"],
+   ul:["acceder a sus datos;","solicitar su rectificación;","solicitar su supresión («derecho al olvido»);","limitar el tratamiento;","la portabilidad de los datos;","oponerse al tratamiento, en particular al basado en el interés legítimo;","retirar su consentimiento en cualquier momento, sin afectar a la licitud del tratamiento anterior."],
+   p2:["Para ejercer estos derechos, escriba a <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. Respondemos en el plazo de un mes. También tiene derecho a presentar una reclamación ante la autoridad de control de su país."]},
+  {h:"11. Sus derechos (Privacy Act 1988 — Australia)",
+   p:["Si se encuentra en Australia, los Australian Privacy Principles le otorgan el derecho a solicitar el acceso a su información personal y su corrección. Atendemos estas solicitudes en un plazo razonable y de forma gratuita siempre que sea posible.",
+      "Si considera que hemos incumplido los APP, puede presentarnos una reclamación en <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>. Acusamos recibo en un plazo de 30 días. Si nuestra respuesta no le satisface, puede dirigirse a la Office of the Australian Information Commissioner (OAIC): <a href=\"https://www.oaic.gov.au\" target=\"_blank\" rel=\"noopener\">oaic.gov.au</a>.",
+      "En caso de violación de datos que pueda causar un daño grave, se lo notificaremos a usted y a la autoridad competente conforme al régimen Notifiable Data Breaches."]},
+  {h:"12. Menores",
+   p:["Este sitio se dirige a clientes profesionales. No recopilamos conscientemente datos de menores de 16 años. Si cree que un menor nos ha facilitado datos, contáctenos y los eliminaremos."]},
+  {h:"13. Modificaciones",
+   p:["Podemos actualizar esta política. Cualquier cambio relevante se indicará en esta página con una nueva fecha de actualización. Rige la fecha que figura en la parte superior."]},
+  {h:"14. Contacto",
+   p:["Pain de Vie Sarl — Irédé, Cotonú, Benín<br>Correo: <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a><br>Teléfono: <a href=\"tel:+2290169296492\">+229 01 69 29 64 92</a>"]}
+ ]};
+
+DOC.zh={
+ title:"隐私与 Cookie 政策",
+ updated:"最后更新：2026年8月11日",
+ intro:"Pain de Vie Sarl 尊重您的隐私。本政策说明我们处理哪些个人数据、目的、法律依据、共享对象，以及您如何行使权利。本政策依据欧盟《通用数据保护条例》（GDPR 2016/679）和澳大利亚《1988年隐私法》（Australian Privacy Principles）编写。",
+ back:"← 返回网站",
+ toc_h:"目录",
+ sections:[
+  {h:"1. 数据控制者",
+   p:["数据控制者为 <strong>Pain de Vie Sarl</strong>，冷冻食品进口与分销商，地址：贝宁科托努 Irédé。",
+      "如对本政策有任何疑问或需行使您的权利，请联系：<a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>。"]},
+  {h:"2. 适用范围",
+   p:["本政策适用于 pain2vie.com 网站。对于位于欧洲经济区和英国的访问者，我们适用 GDPR；对于位于澳大利亚的访问者，我们适用 Australian Privacy Principles。当两者同时适用时，我们采用更高的保护标准。"]},
+  {h:"3. 我们处理的数据",
+   h3a:"a) 您主动提供的信息",
+   ula:["您的姓名；","您的电子邮箱；","您的留言主题与内容；","您选择补充的其他信息（数量、公司、需求）。"],
+   h3b:"b) 自动收集的信息",
+   pb:["我们的托管服务商 Cloudflare 会记录保障安全与稳定运行所必需的技术日志：IP 地址、浏览器类型、访问页面、日期与时间。这些日志仅用于防止滥用和排查故障。"],
+   h3c:"c) 存储在您设备上的数据",
+   pc:["我们不使用任何广告 Cookie，也不使用第三方跟踪器。详见第 5 节。"],
+   h3d:"d) 敏感数据",
+   pd:["我们从不收集敏感数据（健康状况、政治或宗教观点、生物识别数据）。请勿在留言中包含此类信息。"]},
+  {h:"4. 处理目的与法律依据",
+   p:["我们仅出于以下目的处理您的数据："],
+   table:{head:["目的","数据","法律依据（GDPR）"],
+    rows:[["回复您的业务咨询","姓名、邮箱、留言","订立合同前的必要措施（第6(1)(b)条）及合法利益（第6(1)(f)条）"],
+          ["网站安全与防止滥用","技术日志、IP 地址","合法利益（第6(1)(f)条）"],
+          ["记住您选择的语言及同意选择","本地存储","合法利益／您所请求的功能"],
+          ["匿名访问量统计（如启用）","汇总统计数据","同意（第6(1)(a)条）——默认关闭"]]},
+   p2:["我们绝不将您的数据用于自动化营销、用户画像或定向广告。"]},
+  {h:"5. Cookie 与本地存储（Cookie 政策）",
+   p:["本网站<strong>不设置任何广告 Cookie</strong>，也不使用第三方跟踪器。我们仅使用浏览器的本地存储，数据保留在您的设备上，绝不会发送至我们的服务器。"],
+   table:{head:["名称","类型","目的","有效期"],
+    rows:[["pdv_lang","本地存储 — 必要","记住您选择的语言","直至您清除为止"],
+          ["pdv_consent","本地存储 — 必要","记住您的同意选择","12 个月"],
+          ["访问量统计","可选 — 需同意","匿名统计访问量，仅在您同意后加载。","默认关闭"]]},
+   p2:["您可随时接受或拒绝访问量统计：拒绝与接受同样简便，且不会减少任何功能。如需更改选择，请使用每个页面底部的“Cookie 设置”链接。您也可以在浏览器设置中清除本地存储。"]},
+  {h:"6. 接收方与受托处理方",
+   p:["我们绝不出售或出租您的数据。仅有我们的授权人员以及以下按我们指示行事的服务商可以接触这些数据："],
+   ul:["<strong>FormSubmit</strong> — 处理表单提交并通过电子邮件转发您的留言（<a href=\"https://formsubmit.co/privacy\" target=\"_blank\" rel=\"noopener\">政策</a>）；",
+       "<strong>Cloudflare</strong> — 网站托管、分发与安全防护（<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener\">政策</a>）；",
+       "<strong>Google Fonts</strong> — 提供网页字体；加载字体时 Google 可见您的 IP 地址（<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">政策</a>）；",
+       "<strong>Google Workspace / Gmail</strong> — 接收并保存发送给我们的邮件。"],
+   p2:["在法律要求或为主张、行使及抗辩法律权利时，我们也可能披露数据。"]},
+  {h:"7. 跨境传输",
+   p:["我们的服务商可能在贝宁、欧洲经济区或澳大利亚境外（包括美国）处理您的数据。此类传输依据适当保障措施进行，例如欧盟委员会的标准合同条款。如需详情，请与我们联系。"]},
+  {h:"8. 数据保留",
+   ul:["通过表单收到的留言：保存至处理完您的请求为止，之后出于业务目的最长保留至最后一次联系后 3 年，除非您要求删除；",
+       "安全技术日志：由托管服务商设定的较短期限；",
+       "本地存储：请参见第 5 节所列有效期。"]},
+  {h:"9. 安全",
+   p:["本网站仅通过 HTTPS 提供服务，并受安全响应头（CSP、HSTS）保护。收到的留言仅限确有需要的人员访问。由于没有绝对安全的系统，请勿通过表单发送高度机密的信息。"]},
+  {h:"10. 您的权利（GDPR）",
+   p:["若您位于欧洲经济区或英国，您有权："],
+   ul:["访问您的数据；","要求更正；","要求删除（“被遗忘权”）；","限制处理；","数据可携；","反对处理，特别是基于合法利益的处理；","随时撤回同意，且不影响撤回前处理的合法性。"],
+   p2:["如需行使上述权利，请发送邮件至 <a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>。我们将在一个月内答复。您也有权向所在国的监管机构投诉。"]},
+  {h:"11. 您的权利（澳大利亚《1988年隐私法》）",
+   p:["若您位于澳大利亚，Australian Privacy Principles 赋予您请求访问及更正个人信息的权利。我们将在合理期限内处理此类请求，并在可行情况下免费办理。",
+      "若您认为我们违反了 APP，可向我们投诉：<a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a>。我们将在 30 天内确认收到。若您对答复不满意，可联系澳大利亚信息专员公署（OAIC）：<a href=\"https://www.oaic.gov.au\" target=\"_blank\" rel=\"noopener\">oaic.gov.au</a>。",
+      "如发生可能造成严重损害的数据泄露，我们将依据 Notifiable Data Breaches 制度通知您及主管机构。"]},
+  {h:"12. 未成年人",
+   p:["本网站面向企业客户。我们不会在知情的情况下收集 16 岁以下人士的数据。若您认为未成年人向我们提供了数据，请联系我们，我们将予以删除。"]},
+  {h:"13. 政策变更",
+   p:["我们可能更新本政策。任何重大变更将在本页面标注新的更新日期。以页面顶部的日期为准。"]},
+  {h:"14. 联系我们",
+   p:["Pain de Vie Sarl — 贝宁科托努 Irédé<br>邮箱：<a href=\"mailto:paindevie2018@gmail.com\">paindevie2018@gmail.com</a><br>电话：<a href=\"tel:+2290169296492\">+229 01 69 29 64 92</a>"]}
+ ]};
+
+var SUPPORTED=["en","fr","es","zh"];
+
+function block(tag,items){
+  if(!items||!items.length)return"";
+  if(tag==="ul")return"<ul>"+items.map(function(i){return"<li>"+i+"</li>";}).join("")+"</ul>";
+  return items.map(function(i){return"<p>"+i+"</p>";}).join("");
 }
-document.querySelectorAll(".langsw button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.lang);});});
+function tableHTML(t){
+  if(!t)return"";
+  return'<table><thead><tr>'+t.head.map(function(h){return"<th scope=\"col\">"+h+"</th>";}).join("")+
+    "</tr></thead><tbody>"+t.rows.map(function(r){
+      return"<tr>"+r.map(function(c,i){return i===0?"<th scope=\"row\">"+c+"</th>":"<td>"+c+"</td>";}).join("")+"</tr>";
+    }).join("")+"</tbody></table>";
+}
+function render(lang){
+  var d=DOC[lang]||DOC.fr;
+  document.documentElement.lang=lang;
+  document.title=d.title+" | Pain de Vie";
+  document.getElementById("p-title").textContent=d.title;
+  document.getElementById("p-upd").textContent=d.updated;
+  document.getElementById("p-intro").innerHTML=d.intro;
+  document.getElementById("p-back").textContent=d.back;
+  document.getElementById("toc-h").textContent=d.toc_h;
+
+  var toc="",body="";
+  d.sections.forEach(function(s,i){
+    var id="sec-"+(i+1);
+    toc+='<li><a href="#'+id+'">'+s.h+"</a></li>";
+    body+='<section><h2 id="'+id+'">'+s.h+"</h2>";
+    body+=block("p",s.p);
+    if(s.h3a){body+="<h3>"+s.h3a+"</h3>"+block("ul",s.ula);}
+    if(s.h3b){body+="<h3>"+s.h3b+"</h3>"+block("p",s.pb);}
+    if(s.h3c){body+="<h3>"+s.h3c+"</h3>"+block("p",s.pc);}
+    if(s.h3d){body+="<h3>"+s.h3d+"</h3>"+block("p",s.pd);}
+    body+=tableHTML(s.table);
+    body+=block("ul",s.ul);
+    body+=block("p",s.p2);
+    body+="</section>";
+  });
+  document.getElementById("p-toc").innerHTML=toc;
+  document.getElementById("p-body").innerHTML=body;
+
+  document.querySelectorAll(".langsw button").forEach(function(b){
+    b.setAttribute("aria-current",b.dataset.lang===lang?"true":"false");
+  });
+  try{localStorage.setItem("pdv_lang",lang);}catch(e){}
+  if(window.PDVConsent)window.PDVConsent.setLang(lang);
+}
+document.querySelectorAll(".langsw button").forEach(function(b){
+  b.addEventListener("click",function(){render(b.dataset.lang);});
+});
 var start="fr";
-try{var s=localStorage.getItem("pdv_lang");if(s)start=s;else{var n=(navigator.language||"fr").slice(0,2);if(SUPPORTED.includes(n))start=n;}}catch(e){}
-setLang(start);
+try{var s=localStorage.getItem("pdv_lang");if(s)start=s;else{var n=(navigator.language||"fr").slice(0,2);if(SUPPORTED.indexOf(n)>-1)start=n;}}catch(e){}
+if(SUPPORTED.indexOf(start)<0)start="fr";
+render(start);
 document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
+<script src="consent.js" defer></script>
 </body>
 </html>

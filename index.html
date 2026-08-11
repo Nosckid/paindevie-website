@@ -73,7 +73,7 @@
   --coral:#D8552F; --coral-deep:#B4441F;
   --cream:#FAF6EF; --cream-2:#F2EADD; --card:#FFFFFF;
   --glacier:#DCE7E9; --glacier-deep:#B9D0D4;
-  --ink:#2A1830; --muted:#8A7A90; --line:rgba(51,24,63,0.12);
+  --ink:#2A1830; --muted:#6B5B71; --line:rgba(51,24,63,0.12);
   --maxw:1200px;
   --serif:'Fraunces',Georgia,serif;
   --sans:'Hanken Grotesk','Noto Sans SC',system-ui,sans-serif;
@@ -99,6 +99,12 @@ img{max-width:100%;display:block}
 .btn-out:hover{background:var(--auber);color:var(--cream)}
 .arrow{transition:transform .2s ease}
 .btn:hover .arrow{transform:translateX(3px)}
+
+/* screen-reader-only text (visible to assistive tech only) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* visible keyboard focus everywhere */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+main:focus{outline:none}
 
 /* skip link */
 .skip{position:absolute;left:-999px;top:0;background:var(--auber);color:#fff;padding:10px 16px;z-index:200;border-radius:0 0 8px 0}
@@ -274,7 +280,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
 .ft-in{max-width:var(--maxw);margin:0 auto;padding:66px 28px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px}
 .ft-brand img{height:70px;width:auto;margin-bottom:18px}
 .ft-brand p{color:rgba(250,246,239,.72);font-size:15px;max-width:30em;margin:0}
-.ft h4{font-family:var(--sans);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin:0 0 18px;font-weight:600}
+.ft h2{font-family:var(--sans);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);margin:0 0 18px;font-weight:600}
 .ft ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
 .ft ul a{color:rgba(250,246,239,.82);font-size:15px}
 .ft ul a:hover{color:var(--gold-soft)}
@@ -326,7 +332,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
 </style>
 </head>
 <body>
-<a href="#products" class="skip" data-i18n="skip">Skip to content</a>
+<a href="#top" class="skip" data-i18n="skip">Skip to content</a>
 
 <!-- category + ui icon symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -363,18 +369,18 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
     </nav>
     <div class="nav-right">
       <div class="langsw" role="group" aria-label="Language">
-        <button data-lang="en" aria-current="true">EN</button>
-        <button data-lang="fr">FR</button>
-        <button data-lang="es">ES</button>
-        <button data-lang="zh" lang="zh">中文</button>
+        <button data-lang="en" lang="en" aria-current="true"><span aria-hidden="true">EN</span><span class="sr-only">English</span></button>
+        <button data-lang="fr" lang="fr"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></button>
+        <button data-lang="es" lang="es"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></button>
+        <button data-lang="zh" lang="zh"><span aria-hidden="true">中文</span><span class="sr-only">中文</span></button>
       </div>
       <a href="#contact" class="btn btn-coral nav-cta" data-i18n="nav_quote">Request a quote</a>
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+      <button class="burger" id="burger" aria-label="Menu" aria-controls="navlinks" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <!-- HERO -->
 <section class="hero" id="home" style="padding:0">
   <div class="hero-in">
@@ -383,7 +389,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
       <h1><span data-i18n="hero_t1">Fresh from the source,</span><br><span class="l2" data-i18n="hero_t2">frozen at its peak</span></h1>
       <p class="sub" data-i18n="hero_sub">Pain de Vie imports fine frozen fish, fruit, potatoes and poultry cuts, sold by the carton, moved through an unbroken cold chain, delivered ready for your kitchen or counter.</p>
       <div class="hero-cta">
-        <a href="#products" class="btn btn-coral" data-i18n="hero_cta1">Explore our range <span class="arrow">→</span></a>
+        <a href="#products" class="btn btn-coral" data-i18n="hero_cta1">Explore our range <span class="arrow" aria-hidden="true">→</span></a>
         <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta2">Request a quote</a>
       </div>
     </div>
@@ -461,54 +467,54 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
     <!-- FRUITS -->
     <div class="cat c-fruits reveal">
       <div class="cat-head">
-        <span class="cat-ic"><svg><use href="#ic-fruit"/></svg></span>
+        <span class="cat-ic"><svg aria-hidden="true"><use href="#ic-fruit"/></svg></span>
         <h3 data-i18n="cat_fruits">Fruits</h3>
       </div>
       <div class="grid">
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Strawberry/photo" src="Images/Fruits/Strawberry/photo.jpg" alt="Frozen strawberries, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_strawberry">Strawberry</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Pear/photo" src="Images/Fruits/Pear/photo.jpg" alt="Frozen pears, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_pear">Pear</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Apple/photo" src="Images/Fruits/Apple/photo.jpg" alt="Frozen apples, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_apple">Apple</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Grapes/photo" src="Images/Fruits/Grapes/photo.jpg" alt="Grapes, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_grapes">Grapes</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Strawberry/photo" src="Images/Fruits/Strawberry/photo.jpg" alt="Frozen strawberries, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_strawberry">Strawberry</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Pear/photo" src="Images/Fruits/Pear/photo.jpg" alt="Frozen pears, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_pear">Pear</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Apple/photo" src="Images/Fruits/Apple/photo.jpg" alt="Frozen apples, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_apple">Apple</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fruit"/></svg><img class="ph-img" data-base="Images/Fruits/Grapes/photo" src="Images/Fruits/Grapes/photo.jpg" alt="Grapes, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fruits">Fruits</p><h4 data-i18n="p_grapes">Grapes</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
       </div>
     </div>
 
     <!-- FISH -->
     <div class="cat c-fish reveal">
       <div class="cat-head">
-        <span class="cat-ic"><svg><use href="#ic-fish"/></svg></span>
+        <span class="cat-ic"><svg aria-hidden="true"><use href="#ic-fish"/></svg></span>
         <h3 data-i18n="cat_fish">Fish</h3>
       </div>
       <div class="grid">
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Chinchard/photo" src="Images/Fish/Chinchard/photo.jpg" alt="Frozen chinchard, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_chinchard">Chinchard</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Herring/photo" src="Images/Fish/Herring/photo.jpg" alt="Frozen herring, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_herring">Herring</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Tilapia/photo" src="Images/Fish/Tilapia/photo.jpg" alt="Frozen tilapia, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_tilapia">Tilapia</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Blue%20Whiting/photo" src="Images/Fish/Blue%20Whiting/photo.jpg" alt="Frozen blue whiting, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_bluewhiting">Blue Whiting</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Chinchard/photo" src="Images/Fish/Chinchard/photo.jpg" alt="Frozen chinchard, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_chinchard">Chinchard</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Herring/photo" src="Images/Fish/Herring/photo.jpg" alt="Frozen herring, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_herring">Herring</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Tilapia/photo" src="Images/Fish/Tilapia/photo.jpg" alt="Frozen tilapia, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_tilapia">Tilapia</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-fish"/></svg><img class="ph-img" data-base="Images/Fish/Blue%20Whiting/photo" src="Images/Fish/Blue%20Whiting/photo.jpg" alt="Frozen blue whiting, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_fish">Fish</p><h4 data-i18n="p_bluewhiting">Blue Whiting</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
       </div>
     </div>
 
     <!-- POTATOES -->
     <div class="cat c-potatoes reveal">
       <div class="cat-head">
-        <span class="cat-ic"><svg><use href="#ic-potato"/></svg></span>
+        <span class="cat-ic"><svg aria-hidden="true"><use href="#ic-potato"/></svg></span>
         <h3 data-i18n="cat_potatoes">Potatoes</h3>
       </div>
       <div class="grid">
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-potato"/></svg><img class="ph-img" data-base="Images/Potatoes/Potatoes/photo" src="Images/Potatoes/Potatoes/photo.jpg" alt="Frozen potatoes, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_potatoes">Potatoes</p><h4 data-i18n="p_potatoes">Potatoes</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-potato"/></svg><img class="ph-img" data-base="Images/Potatoes/Potatoes/photo" src="Images/Potatoes/Potatoes/photo.jpg" alt="Frozen potatoes, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_potatoes">Potatoes</p><h4 data-i18n="p_potatoes">Potatoes</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
       </div>
     </div>
 
     <!-- POULTRY -->
     <div class="cat c-poultry reveal">
       <div class="cat-head">
-        <span class="cat-ic"><svg><use href="#ic-poultry"/></svg></span>
+        <span class="cat-ic"><svg aria-hidden="true"><use href="#ic-poultry"/></svg></span>
         <h3 data-i18n="cat_poultry">Poultry</h3>
       </div>
       <div class="grid">
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Whole%20wing%20%283-joint%29/photo" src="Images/Poultry/Whole%20wing%20%283-joint%29/photo.jpg" alt="Whole three-joint chicken wing, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_3phalange">3-Phalange</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Wing/photo" src="Images/Poultry/Wing/photo.jpg" alt="Chicken wings, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_aileron">Aileron</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Thigh/photo" src="Images/Poultry/Thigh/photo.jpg" alt="Chicken thigh, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_cuisse">Cuisse</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Drumstick/photo" src="Images/Poultry/Drumstick/photo.jpg" alt="Chicken drumstick, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_pilon">Pilon</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
-        <article class="pcard"><div class="pimg"><svg><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Sausage/photo" src="Images/Poultry/Sausage/photo.jpg" alt="Chicken sausage, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_saucisse">Saucisse</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Whole%20wing%20%283-joint%29/photo" src="Images/Poultry/Whole%20wing%20%283-joint%29/photo.jpg" alt="Whole three-joint chicken wing, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_3phalange">3-Phalange</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Wing/photo" src="Images/Poultry/Wing/photo.jpg" alt="Chicken wings, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_aileron">Aileron</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Thigh/photo" src="Images/Poultry/Thigh/photo.jpg" alt="Chicken thigh, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_cuisse">Cuisse</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Drumstick/photo" src="Images/Poultry/Drumstick/photo.jpg" alt="Chicken drumstick, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_pilon">Pilon</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
+        <article class="pcard"><div class="pimg"><svg aria-hidden="true"><use href="#ic-poultry"/></svg><img class="ph-img" data-base="Images/Poultry/Sausage/photo" src="Images/Poultry/Sausage/photo.jpg" alt="Chicken sausage, sold by the carton" loading="lazy"></div><div class="pbody"><p class="pe" data-i18n="cat_poultry">Poultry</p><h4 data-i18n="p_saucisse">Saucisse</h4><p class="pd" data-i18n="d_carton">By the carton</p></div></article>
       </div>
     </div>
 
@@ -517,7 +523,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
         <h3 data-i18n="more_t">Looking for something you don't see here?</h3>
         <p data-i18n="more_d">Our catalogue extends well beyond this selection. Tell us what your business needs, and we will source it to the same standard.</p>
       </div>
-      <a href="#contact" class="btn btn-coral" data-i18n="more_btn">Request the full catalogue <span class="arrow">→</span></a>
+      <a href="#contact" class="btn btn-coral" data-i18n="more_btn">Request the full catalogue <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -556,9 +562,9 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
       <h2 data-i18n="why_title">Reasons to choose us</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal"><span class="wi"><svg><use href="#ic-snow"/></svg></span><h3 data-i18n="why1_t">Freshness</h3><p data-i18n="why1_d">Frozen at peak and kept cold end to end, never a break in the chain.</p></div>
-      <div class="why-card reveal"><span class="wi"><svg><use href="#ic-shield"/></svg></span><h3 data-i18n="why2_t">Quality</h3><p data-i18n="why2_d">Premium grades, careful selection and consistent cartons every time.</p></div>
-      <div class="why-card reveal"><span class="wi"><svg><use href="#ic-truck"/></svg></span><h3 data-i18n="why3_t">Reliability</h3><p data-i18n="why3_d">Dependable supply and delivery you can plan your business around.</p></div>
+      <div class="why-card reveal"><span class="wi"><svg aria-hidden="true"><use href="#ic-snow"/></svg></span><h3 data-i18n="why1_t">Freshness</h3><p data-i18n="why1_d">Frozen at peak and kept cold end to end, never a break in the chain.</p></div>
+      <div class="why-card reveal"><span class="wi"><svg aria-hidden="true"><use href="#ic-shield"/></svg></span><h3 data-i18n="why2_t">Quality</h3><p data-i18n="why2_d">Premium grades, careful selection and consistent cartons every time.</p></div>
+      <div class="why-card reveal"><span class="wi"><svg aria-hidden="true"><use href="#ic-truck"/></svg></span><h3 data-i18n="why3_t">Reliability</h3><p data-i18n="why3_d">Dependable supply and delivery you can plan your business around.</p></div>
     </div>
   </div>
 </section>
@@ -574,12 +580,12 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div class="ci"><span class="cic"><svg><use href="#ic-phone"/></svg></span><div><div class="cl" data-i18n="c_phone_l">Phone</div><a class="cv" href="tel:+2290169296492" style="color:var(--auber)">+229 01 69 29 64 92</a></div></div>
-        <div class="ci"><span class="cic"><svg><use href="#ic-mail"/></svg></span><div><div class="cl" data-i18n="c_email_l">Email</div><a class="cv" id="maillink" href="mailto:paindevie2018@gmail.com?subject=Product%20inquiry" style="color:var(--auber);word-break:break-all">paindevie2018@gmail.com</a></div></div>
-        <div class="ci"><span class="cic"><svg><use href="#ic-pin"/></svg></span><div><div class="cl" data-i18n="c_loc_l">Location</div><a class="cv" style="display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 9px;color:var(--auber)" href="https://www.google.com/maps/search/?api=1&query=Pain%20de%20Vie%2C%20Ir%C3%A9d%C3%A9%2C%20Cotonou%2C%20Benin" target="_blank" rel="noopener"><span data-i18n="c_loc_v">Irédé, Cotonou, Bénin</span><span style="font-size:12.5px;font-weight:600;color:var(--gold-deep)" data-i18n="c_dir">Directions ↗</span></a></div></div>
+        <div class="ci"><span class="cic"><svg aria-hidden="true"><use href="#ic-phone"/></svg></span><div><div class="cl" data-i18n="c_phone_l">Phone</div><a class="cv" href="tel:+2290169296492" style="color:var(--auber)">+229 01 69 29 64 92</a></div></div>
+        <div class="ci"><span class="cic"><svg aria-hidden="true"><use href="#ic-mail"/></svg></span><div><div class="cl" data-i18n="c_email_l">Email</div><a class="cv" id="maillink" href="mailto:paindevie2018@gmail.com?subject=Product%20inquiry" style="color:var(--auber);word-break:break-all">paindevie2018@gmail.com</a></div></div>
+        <div class="ci"><span class="cic"><svg aria-hidden="true"><use href="#ic-pin"/></svg></span><div><div class="cl" data-i18n="c_loc_l">Location</div><a class="cv" style="display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 9px;color:var(--auber)" href="https://www.google.com/maps/search/?api=1&query=Pain%20de%20Vie%2C%20Ir%C3%A9d%C3%A9%2C%20Cotonou%2C%20Benin" target="_blank" rel="noopener"><span data-i18n="c_loc_v">Irédé, Cotonou, Bénin</span><span style="font-size:12.5px;font-weight:600;color:var(--gold-deep)" data-i18n="c_dir">Directions ↗</span></a></div></div>
         <div class="socials">
 
-          <a href="https://wa.me/2290169296492" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#ic-wa"/></svg></a>
+          <a href="https://wa.me/2290169296492" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#ic-wa"/></svg></a>
         </div>
       </div>
       <form class="form reveal" name="contact" method="POST" action="https://formsubmit.co/paindevie2018@gmail.com">
@@ -589,14 +595,14 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
         <input type="hidden" name="_subject" id="fsub" value="Nouvelle demande via le site Pain de Vie">
         <p class="hp"><label>Leave this field empty <input name="_honey" tabindex="-1"></label></p>
         <label for="fn" data-i18n="f_name">Name</label>
-        <input id="fn" name="name" type="text" autocomplete="name" required>
+        <input id="fn" name="name" type="text" autocomplete="name" required aria-required="true">
         <label for="fe" data-i18n="f_email">Email</label>
-        <input id="fe" name="email" type="email" autocomplete="email" required>
+        <input id="fe" name="email" type="email" autocomplete="email" required aria-required="true">
         <label for="fs" data-i18n="f_subject">Subject</label>
-        <input id="fs" name="subject" type="text" required>
+        <input id="fs" name="subject" type="text" required aria-required="true">
         <label for="fm" data-i18n="f_msg">What do you need?</label>
-        <textarea id="fm" name="message" required></textarea>
-        <button type="submit" class="btn btn-coral" data-i18n="f_send">Send inquiry <span class="arrow">→</span></button>
+        <textarea id="fm" name="message" required aria-required="true"></textarea>
+        <button type="submit" class="btn btn-coral" data-i18n="f_send">Send inquiry <span class="arrow" aria-hidden="true">→</span></button>
       </form>
     </div>
   </div>
@@ -606,7 +612,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
 <!-- SUPPLIERS -->
 <section class="suppliers">
   <div class="wrap"><p class="sup-title" data-i18n="sup_title">Our trusted suppliers</p></div>
-  <div class="marquee" role="img" aria-label="Our trusted suppliers">
+  <div class="marquee" role="group" aria-label="Our trusted suppliers">
     <div class="marquee-track"><div class="sup-chip is-probe"><img data-base="Images/Suppliers/01/photo" src="Images/Suppliers/01/photo.jpg" alt="Capago"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/02/photo" src="Images/Suppliers/02/photo.png" alt="Mondial Foods"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/03/photo" src="Images/Suppliers/03/photo.png" alt="Saria"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/04/photo" src="Images/Suppliers/04/photo.png" alt="Seafoodia"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/05/photo" src="Images/Suppliers/05/photo.jpg" alt="Tomex"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/06/photo" src="Images/Suppliers/06/photo.jpg" alt="Polar Fresh Group"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/07/photo" src="Images/Suppliers/07/photo.jpg" alt="Al Khaleej"></div><div class="sup-chip is-probe"><img data-base="Images/Suppliers/08/photo" src="Images/Suppliers/08/photo.jpg" alt="Brittania"></div></div>
   </div>
 </section>
@@ -619,7 +625,7 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
       <p data-i18n="foot_tagline">Premium frozen food importer and distributor in Benin. Sourced from the world's finest origins, delivered under a strict, unbroken cold chain.</p>
     </div>
     <div>
-      <h4 data-i18n="foot_explore">Explore</h4>
+      <h2 data-i18n="foot_explore">Explore</h2>
       <ul>
         <li><a href="#about" data-i18n="nav_about">Welcome</a></li>
         <li><a href="#products" data-i18n="nav_products">Products</a></li>
@@ -629,13 +635,16 @@ footer.ft{background:var(--auber-deep);color:var(--cream)}
       </ul>
     </div>
     <div>
-      <h4 data-i18n="foot_company">Company</h4>
+      <h2 data-i18n="foot_company">Company</h2>
       <p class="cred">Pain de Vie Sarl<br>Import · Export<br>Irédé, Cotonou, Bénin</p>
     </div>
   </div>
   <div class="ft-bottom">
     <span>© <span id="yr"></span> Pain de Vie. <span data-i18n="foot_rights">All rights reserved.</span></span>
-    <a href="privacy.html" style="color:rgba(250,246,239,.7)" data-i18n="foot_privacy">Privacy · Confidentialité</a>
+    <span style="display:flex;gap:18px;flex-wrap:wrap">
+      <a href="privacy.html" style="color:rgba(250,246,239,.7)" data-i18n="foot_privacy">Privacy · Confidentialité</a>
+      <button type="button" data-cookie-settings style="background:none;border:none;padding:0;font:inherit;color:rgba(250,246,239,.7);cursor:pointer;text-decoration:underline">Cookie settings</button>
+    </span>
   </div>
 </footer>
 
@@ -661,6 +670,7 @@ function setLang(lang){
   var fs=document.getElementById("fs"); if(fs)fs.placeholder=d.f_subject_default;
   var ml=document.getElementById("maillink"); if(ml)ml.href="mailto:paindevie2018@gmail.com?subject="+encodeURIComponent(d.f_subject_default);
   try{localStorage.setItem("pdv_lang",lang);}catch(e){}
+  if(window.PDVConsent)window.PDVConsent.setLang(lang);
 }
 document.querySelectorAll(".langsw button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 let start="en";
@@ -732,5 +742,6 @@ window.addEventListener("load",function(){
   },400);
 });
 </script>
+<script src="consent.js" defer></script>
 </body>
 </html>
