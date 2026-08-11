@@ -1,0 +1,11 @@
+/* TEAM */
+  Company: Pain de Vie Sarl
+  Site: https://pain2vie.com
+  Location: Irédé, Cotonou, Bénin
+  Contact: paindevie2018 [at] gmail.com
+
+/* SITE */
+  Standards: HTML5, CSS3, JavaScript
+  Languages: Français, English, Español, 中文
+  Hosting: Cloudflare Pages
+  Last update: 2026/08

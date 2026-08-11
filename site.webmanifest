@@ -1,0 +1,14 @@
+{
+  "name": "Pain de Vie",
+  "short_name": "Pain de Vie",
+  "description": "Importateur et distributeur de produits congelés au Bénin.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#33183F",
+  "theme_color": "#33183F",
+  "icons": [
+    { "src": "/Images/Logo/favicon.png", "sizes": "256x256", "type": "image/png", "purpose": "any" }
+  ]
+}
