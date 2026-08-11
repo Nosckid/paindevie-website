@@ -44,19 +44,17 @@ THE COMPANY LOGO
   Keep the name exactly "logo.png" if you ever replace it, and keep a
   see-through (transparent) background.
 
-THE CONTACT FORM  (one setting to switch on, once)
+THE CONTACT FORM  (confirm it once)
   When a visitor fills the form and clicks "Send inquiry", the message
-  goes to Netlify, and Netlify emails it to you. You must switch the
-  email on once:
-    1. Deploy the site to Netlify.
-    2. In Netlify open your site -> Forms -> Form notifications.
-    3. Add notification -> Email notification.
-    4. Put paindevie2018@gmail.com as the address, choose the form
-       named "contact", and save.
-  From then on every inquiry arrives in that inbox. The subject line
-  the visitor typed becomes the email subject. You can also read all
-  submissions any time under Forms in Netlify.
-  Free plan allows 100 form submissions per month.
+  is delivered by FormSubmit and emailed to paindevie2018@gmail.com.
+  The FIRST time anyone submits the form on the live site, FormSubmit
+  sends a one-time confirmation email to paindevie2018@gmail.com.
+  Open it and click "Activate" once. After that, every inquiry arrives
+  in that inbox automatically. The subject line the visitor typed
+  becomes the email subject.
+
+  (Note: this site is hosted on Cloudflare, not Netlify, so there is
+  no Netlify "Forms" panel to set up. FormSubmit handles everything.)
 
   After sending, the visitor sees the thank-you.html page. Keep that
   file in the folder.
