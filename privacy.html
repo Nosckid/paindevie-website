@@ -9,75 +9,106 @@
 <link rel="icon" type="image/png" href="Images/Logo/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--auber:#33183F;--auber-deep:#24122E;--gold:#E39B2E;--gold-deep:#B4761A;--coral:#D8552F;--cream:#FAF6EF;--cream-2:#F2EADD;--ink:#2A1830;--muted:#8A7A90;--line:rgba(51,24,63,.12)}
+:root{--auber:#33183F;--auber-deep:#24122E;--gold:#E39B2E;--gold-deep:#B4761A;--coral:#D8552F;--cream:#FAF6EF;--cream-2:#F2EADD;--ink:#2A1830;--muted:#8A7A90;--line:rgba(51,24,63,.12);--sans:'Hanken Grotesk','Noto Sans SC',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif}
+:lang(zh){--serif:'Noto Sans SC',sans-serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.65}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65}
 a{color:var(--coral)}
-.top{background:var(--auber);color:var(--cream);padding:22px 0}
+.top{background:var(--auber);color:var(--cream);padding:16px 0}
 .wrap{max-width:820px;margin:0 auto;padding:0 24px}
-.top .wrap{display:flex;align-items:center;gap:12px}
-.top img{height:40px;width:auto}
-.top .bt{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:20px}
+.top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.top img{height:38px;width:auto}
+.top .bt{font-family:var(--serif);font-weight:600;font-size:20px}
+.brand{display:flex;align-items:center;gap:11px;color:inherit;text-decoration:none;margin-right:auto}
+.langsw{display:flex;background:rgba(250,246,239,.12);border:1px solid rgba(250,246,239,.25);border-radius:999px;padding:3px}
+.langsw button{border:none;background:transparent;font-family:var(--sans);font-size:13px;font-weight:600;color:rgba(250,246,239,.7);padding:5px 11px;border-radius:999px;cursor:pointer;transition:all .15s}
+.langsw button[aria-current="true"]{background:var(--cream);color:var(--auber)}
 main{padding:52px 0 72px}
-h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(28px,4vw,40px);color:var(--auber);letter-spacing:-.6px;margin:0 0 6px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,40px);color:var(--auber);letter-spacing:-.6px;margin:0 0 6px}
 .upd{color:var(--muted);font-size:14px;margin:0 0 34px}
-h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:23px;color:var(--auber);margin:36px 0 10px}
+h2{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--auber);margin:36px 0 10px}
 p{margin:0 0 14px}
 ul{margin:0 0 14px;padding-left:22px}
 li{margin:0 0 7px}
-.lang{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:44px;padding-top:16px}
-.back{display:inline-block;margin-top:26px;font-weight:600}
+.back{display:inline-block;margin-top:30px;font-weight:600}
 footer{background:var(--auber-deep);color:rgba(250,246,239,.7);font-size:13.5px;padding:22px 0}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><a href="/" style="display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none"><img src="Images/Logo/logo.png" alt="Pain de Vie"><span class="bt">Pain de Vie</span></a></div></div>
+<div class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="Images/Logo/logo.png" alt="Pain de Vie"><span class="bt">Pain de Vie</span></a>
+  <div class="langsw" role="group" aria-label="Language">
+    <button data-lang="en" aria-current="false">EN</button>
+    <button data-lang="fr" aria-current="true">FR</button>
+    <button data-lang="es" aria-current="false">ES</button>
+    <button data-lang="zh" lang="zh" aria-current="false">中文</button>
+  </div>
+</div></div>
 <main>
   <div class="wrap">
-    <h1>Politique de confidentialité</h1>
-    <p class="upd">Dernière mise à jour : août 2026</p>
+    <h1 data-i18n="h1">Politique de confidentialité</h1>
+    <p class="upd" data-i18n="upd">Dernière mise à jour : août 2026</p>
 
-    <p>Pain de Vie Sarl (« nous ») respecte votre vie privée. Cette page explique quelles données nous recueillons via ce site, pourquoi, et vos droits.</p>
+    <p data-i18n="intro">Pain de Vie Sarl (« nous ») respecte votre vie privée. Cette page explique quelles données nous recueillons via ce site, pourquoi, et vos droits.</p>
 
-    <h2>Données que nous collectons</h2>
-    <p>Nous ne collectons de données personnelles que lorsque vous remplissez volontairement notre formulaire de contact. Il s'agit de :</p>
+    <h2 data-i18n="h_collect">Données que nous collectons</h2>
+    <p data-i18n="collect_intro">Nous ne collectons de données personnelles que lorsque vous remplissez volontairement notre formulaire de contact. Il s'agit de :</p>
     <ul>
-      <li>votre nom ;</li>
-      <li>votre adresse e-mail ;</li>
-      <li>l'objet et le contenu de votre message.</li>
+      <li data-i18n="c_name">votre nom ;</li>
+      <li data-i18n="c_email">votre adresse e-mail ;</li>
+      <li data-i18n="c_msg">l'objet et le contenu de votre message.</li>
     </ul>
-    <p>Nous n'utilisons pas de cookies publicitaires ni de traceurs. Votre choix de langue est conservé localement dans votre navigateur (localStorage) et n'est jamais transmis.</p>
+    <p data-i18n="collect_note">Nous n'utilisons pas de cookies publicitaires ni de traceurs. Votre choix de langue est conservé localement dans votre navigateur (localStorage) et n'est jamais transmis.</p>
 
-    <h2>Utilisation des données</h2>
-    <p>Ces informations servent uniquement à répondre à votre demande et à assurer le suivi commercial. Nous ne vendons ni ne louons vos données à des tiers.</p>
+    <h2 data-i18n="h_use">Utilisation des données</h2>
+    <p data-i18n="use_p">Ces informations servent uniquement à répondre à votre demande et à assurer le suivi commercial. Nous ne vendons ni ne louons vos données à des tiers.</p>
 
-    <h2>Sous-traitants</h2>
+    <h2 data-i18n="h_proc">Sous-traitants</h2>
     <ul>
-      <li><strong>FormSubmit</strong> traite l'envoi du formulaire et nous transmet votre message par e-mail (<a href="https://formsubmit.co/privacy" target="_blank" rel="noopener">politique de FormSubmit</a>).</li>
-      <li><strong>Google Fonts</strong> fournit les polices d'affichage ; à ce titre, votre adresse IP est visible par Google lors du chargement des polices.</li>
-      <li><strong>Cloudflare</strong> héberge et distribue le site.</li>
+      <li><strong>FormSubmit</strong> <span data-i18n="proc_form">traite l'envoi du formulaire et nous transmet votre message par e-mail.</span> (<a href="https://formsubmit.co/privacy" target="_blank" rel="noopener" data-i18n="proc_form_link">politique de FormSubmit</a>)</li>
+      <li><strong>Google Fonts</strong> <span data-i18n="proc_fonts">fournit les polices d'affichage ; à ce titre, votre adresse IP est visible par Google lors du chargement des polices.</span></li>
+      <li><strong>Cloudflare</strong> <span data-i18n="proc_cf">héberge et distribue le site.</span></li>
     </ul>
 
-    <h2>Conservation</h2>
-    <p>Les messages reçus sont conservés dans notre boîte e-mail le temps nécessaire au traitement de votre demande, puis supprimés sur simple demande.</p>
+    <h2 data-i18n="h_ret">Conservation</h2>
+    <p data-i18n="ret_p">Les messages reçus sont conservés dans notre boîte e-mail le temps nécessaire au traitement de votre demande, puis supprimés sur simple demande.</p>
 
-    <h2>Vos droits</h2>
-    <p>Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant à <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a>.</p>
+    <h2 data-i18n="h_rights">Vos droits</h2>
+    <p><span data-i18n="rights_p">Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant à</span> <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a>.</p>
 
-    <h2>Contact</h2>
-    <p>Pain de Vie Sarl — Irédé, Cotonou, Bénin — <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a></p>
+    <h2 data-i18n="h_contact">Contact</h2>
+    <p><span data-i18n="contact_p">Pain de Vie Sarl — Irédé, Cotonou, Bénin —</span> <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a></p>
 
-    <div class="lang">
-      <h2 style="margin-top:0">English summary</h2>
-      <p>We only collect the name, email, and message you submit through our contact form, solely to reply to your inquiry. We do not sell your data or use advertising cookies. Your form data is processed by FormSubmit (email delivery); Google Fonts sees your IP when fonts load; Cloudflare hosts the site. To access, correct, or delete your data, email <a href="mailto:paindevie2018@gmail.com">paindevie2018@gmail.com</a>.</p>
-    </div>
-
-    <a class="back" href="/">&larr; Retour au site / Back to site</a>
+    <a class="back" href="/" data-i18n="back">← Retour au site</a>
   </div>
 </main>
-<footer><div class="wrap">© <span id="yr"></span> Pain de Vie Sarl. Irédé, Cotonou, Bénin.</div></footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<footer><div class="wrap">© <span id="yr"></span> Pain de Vie Sarl. <span data-i18n="foot">Irédé, Cotonou, Bénin.</span></div></footer>
+<script>
+const PRIV={
+en:{__title:"Privacy Policy | Pain de Vie",h1:"Privacy Policy",upd:"Last updated: August 2026",intro:"Pain de Vie Sarl (“we”) respects your privacy. This page explains what data we collect through this site, why, and your rights.",h_collect:"What we collect",collect_intro:"We only collect personal data when you voluntarily fill in our contact form. This includes:",c_name:"your name;",c_email:"your email address;",c_msg:"the subject and content of your message.",collect_note:"We do not use advertising cookies or trackers. Your language choice is stored locally in your browser (localStorage) and is never transmitted.",h_use:"How we use your data",use_p:"This information is used solely to respond to your inquiry and manage the commercial relationship. We do not sell or rent your data to third parties.",h_proc:"Processors",proc_form:"handles the form submission and delivers your message to us by email.",proc_form_link:"FormSubmit's policy",proc_fonts:"provides the display fonts; as such, your IP address is visible to Google when fonts load.",proc_cf:"hosts and delivers the site.",h_ret:"Retention",ret_p:"Messages received are kept in our mailbox for as long as needed to handle your request, then deleted on request.",h_rights:"Your rights",rights_p:"You can request access to, correction of, or deletion of your data by writing to us at",h_contact:"Contact",contact_p:"Pain de Vie Sarl — Irédé, Cotonou, Benin —",back:"← Back to site",foot:"Irédé, Cotonou, Benin."},
+fr:{__title:"Politique de confidentialité | Pain de Vie",h1:"Politique de confidentialité",upd:"Dernière mise à jour : août 2026",intro:"Pain de Vie Sarl (« nous ») respecte votre vie privée. Cette page explique quelles données nous recueillons via ce site, pourquoi, et vos droits.",h_collect:"Données que nous collectons",collect_intro:"Nous ne collectons de données personnelles que lorsque vous remplissez volontairement notre formulaire de contact. Il s'agit de :",c_name:"votre nom ;",c_email:"votre adresse e-mail ;",c_msg:"l'objet et le contenu de votre message.",collect_note:"Nous n'utilisons pas de cookies publicitaires ni de traceurs. Votre choix de langue est conservé localement dans votre navigateur (localStorage) et n'est jamais transmis.",h_use:"Utilisation des données",use_p:"Ces informations servent uniquement à répondre à votre demande et à assurer le suivi commercial. Nous ne vendons ni ne louons vos données à des tiers.",h_proc:"Sous-traitants",proc_form:"traite l'envoi du formulaire et nous transmet votre message par e-mail.",proc_form_link:"politique de FormSubmit",proc_fonts:"fournit les polices d'affichage ; à ce titre, votre adresse IP est visible par Google lors du chargement des polices.",proc_cf:"héberge et distribue le site.",h_ret:"Conservation",ret_p:"Les messages reçus sont conservés dans notre boîte e-mail le temps nécessaire au traitement de votre demande, puis supprimés sur simple demande.",h_rights:"Vos droits",rights_p:"Vous pouvez demander l'accès, la rectification ou la suppression de vos données en nous écrivant à",h_contact:"Contact",contact_p:"Pain de Vie Sarl — Irédé, Cotonou, Bénin —",back:"← Retour au site",foot:"Irédé, Cotonou, Bénin."},
+es:{__title:"Política de privacidad | Pain de Vie",h1:"Política de privacidad",upd:"Última actualización: agosto de 2026",intro:"Pain de Vie Sarl («nosotros») respeta su privacidad. Esta página explica qué datos recopilamos a través de este sitio, por qué y cuáles son sus derechos.",h_collect:"Qué datos recopilamos",collect_intro:"Solo recopilamos datos personales cuando usted completa voluntariamente nuestro formulario de contacto. Estos son:",c_name:"su nombre;",c_email:"su dirección de correo electrónico;",c_msg:"el asunto y el contenido de su mensaje.",collect_note:"No utilizamos cookies publicitarias ni rastreadores. Su elección de idioma se guarda localmente en su navegador (localStorage) y nunca se transmite.",h_use:"Uso de los datos",use_p:"Esta información se utiliza únicamente para responder a su solicitud y gestionar la relación comercial. No vendemos ni alquilamos sus datos a terceros.",h_proc:"Encargados del tratamiento",proc_form:"gestiona el envío del formulario y nos entrega su mensaje por correo electrónico.",proc_form_link:"política de FormSubmit",proc_fonts:"proporciona las tipografías; por ello, su dirección IP es visible para Google al cargar las fuentes.",proc_cf:"aloja y distribuye el sitio.",h_ret:"Conservación",ret_p:"Los mensajes recibidos se conservan en nuestro buzón durante el tiempo necesario para gestionar su solicitud y se eliminan cuando lo solicite.",h_rights:"Sus derechos",rights_p:"Puede solicitar el acceso, la rectificación o la eliminación de sus datos escribiéndonos a",h_contact:"Contacto",contact_p:"Pain de Vie Sarl — Irédé, Cotonú, Benín —",back:"← Volver al sitio",foot:"Irédé, Cotonú, Benín."},
+zh:{__title:"隐私政策 | Pain de Vie",h1:"隐私政策",upd:"最后更新：2026年8月",intro:"Pain de Vie Sarl（“我们”）尊重您的隐私。本页说明我们通过本网站收集哪些数据、原因以及您的权利。",h_collect:"我们收集的数据",collect_intro:"只有当您主动填写我们的联系表单时，我们才会收集个人数据，包括：",c_name:"您的姓名；",c_email:"您的电子邮箱；",c_msg:"您的留言主题和内容。",collect_note:"我们不使用广告 Cookie 或跟踪器。您的语言选择仅保存在您的浏览器本地（localStorage），绝不会被传输。",h_use:"数据的使用",use_p:"这些信息仅用于回复您的咨询并进行业务跟进。我们不会向第三方出售或出租您的数据。",h_proc:"第三方服务",proc_form:"负责处理表单提交，并通过电子邮件将您的留言转发给我们。",proc_form_link:"FormSubmit 隐私政策",proc_fonts:"提供网页字体；因此在加载字体时，Google 可见您的 IP 地址。",proc_cf:"负责托管和分发本网站。",h_ret:"数据保留",ret_p:"收到的留言会在处理您请求所需的期间内保存在我们的邮箱中，之后可应要求删除。",h_rights:"您的权利",rights_p:"您可以通过以下邮箱联系我们，要求访问、更正或删除您的数据：",h_contact:"联系",contact_p:"Pain de Vie Sarl — 科托努 Irédé，贝宁 —",back:"← 返回网站",foot:"科托努 Irédé，贝宁。"}
+};
+const SUPPORTED=["en","fr","es","zh"];
+function setLang(lang){
+  if(!SUPPORTED.includes(lang))lang="en";
+  const d=PRIV[lang];
+  document.documentElement.lang=lang;
+  document.title=d.__title;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k=el.getAttribute("data-i18n"); if(k in d)el.textContent=d[k];
+  });
+  document.querySelectorAll(".langsw button").forEach(function(b){b.setAttribute("aria-current",b.dataset.lang===lang?"true":"false");});
+  try{localStorage.setItem("pdv_lang",lang);}catch(e){}
+}
+document.querySelectorAll(".langsw button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.lang);});});
+var start="fr";
+try{var s=localStorage.getItem("pdv_lang");if(s)start=s;else{var n=(navigator.language||"fr").slice(0,2);if(SUPPORTED.includes(n))start=n;}}catch(e){}
+setLang(start);
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
